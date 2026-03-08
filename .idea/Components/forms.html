@@ -16,9 +16,10 @@
     <form action="/upload" method="POST" enctype="multipart/form-data" novalidate>
         <fieldset>
             <legend>Identity and Security</legend>
+
             <section>
                 <label for="full-name">Full Name:</label>
-                <input type="text" id="full-name" name="full-name" placeholder="Enter Full Name Here" required minlength="2">
+                <input type="text" id="full-name" name="full-name" placeholder="Enter Full Name Here" required minlength="2" autofocus>
             </section>
 
             <section>
@@ -28,8 +29,14 @@
 
             <section>
                 <label for="new-password">Create Password</label>
-                <input type="password" id="new-password" name="new-password" placeholder="Create Password" require minlength="6" maxlength="20">
+                <input type="password" id="new-password" name="new-password" autocomplete="new-password" Create Password" require minlength="6" maxlength="20">
             </section>
+
+            <section>
+                <label for="user-id">System assigned User ID:</label>
+                <input type="text" id="user-id" name="user-id" value="RNG-7740-X" readonly>
+            </section>
+
         </fieldset>
 
         <fieldset>
@@ -103,6 +110,12 @@
                 <label for="files-upload">Attachments:</label>
                 <input type="file" id="files-upload" name="files-upload" accept=".pdf, image/*" multiple>
             </section>
+
+            <section>
+                <label for="pro-feature">Advanced Ballistics Calculator:</label>
+                <input type="text" id="pro-feature" name="pro-feature" value="Locked - Pro Members Only" disabled>
+            </section>
+
         </fieldset>
         <fieldset>
             <legned>Selections and Feedback</legned>
@@ -174,6 +187,12 @@
                 <p>Submit via Image:</p>
                 <input type="image" src="https://via.placeholder.com/120x45?text=Click+to+Submit" alt="Submit Button">
             </section>
+
+            <section>
+                <p>Submit via Image:</p>
+                <input type="image" src="https://via.placeholder.com/120x45?text=Click+to+Submit" alt="Submit Button" tabindex="2">
+            </section>
+
         </fieldset>
     </form>
 </main>
