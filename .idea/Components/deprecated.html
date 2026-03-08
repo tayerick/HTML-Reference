@@ -11,29 +11,115 @@
 <section>
     <font face="Courier" color="red" size="5">This is styled with the font tag.</font>
 
+    <!--
+    This element adjust the look of the text, specifically targeting the font, size, and color of the text.
+    This element is no longer valid and is now CSS's responsibility to alter font.
+    Ex. font:
+        1.2rem "Fira Sans",
+        sans-serif;
+    -->
+
     <br>
 
     <center>This text is centered the old-fashioned way.</center>
+
+    <!--
+    This elements aims to center the text in the webpage.
+    This element is now replaced by CSS.
+    Ex.
+
+    <div class="center">
+          This text will be centered.
+          <p>So will this paragraph.</p>
+    </div>
+
+    .center {
+        text-align: center;
+    }
+    -->
 
     <br>
 
     <p>This is normal text and <big>this is big text.</big></p>
 
+    <!--
+    This element aims to enlarge text within the tag.
+    Can be done using CSS
+    Ex.
+
+    <p>
+         This is the first sentence.
+        <span class="bigger">This whole sentence is in bigger letters.</span>
+    </p>
+
+    .bigger {
+        font-size: larger;
+    }
+    -->
+
     <br>
 
     <p>This is normal text and <small>this is small text (still valid!).</small></p>
+
+    <!--
+    Per MDN, this element is not deprecated, but it can still be done using CSS.  This element is typically for copyright tags and legal text.
+    Ex.
+    <p>
+        This is the first sentence.
+        <span class="small">This whole sentence is in small letters.</span>
+    </p>
+
+    .small {
+        font-size: 0.8em;
+    }
+
+    -->
 
     <br>
 
     <tt>This looks like it was typed on a teletype machine.</tt>
 
+    <!--
+    This element portrays text using the user agent's default monospace font face.
+    This element is not longer valid and is left to CSS.
+    Ex.
+
+    <p>
+      Enter the following at the telnet command prompt:
+      <code>set localecho</code><br />
+
+      The telnet client should display: <tt>Local Echo is on</tt>
+    </p>
+
+    tt {
+        font-family: "Lucida Console", "Menlo", "Monaco", "Courier New", monospace;
+    }
+    -->
+
     <br>
 
     <strike>This information is no longer accurate.</strike>
 
+    <!--
+    This element strikes a line through the text within the tag.
+    It is now deprecated and replaced by the <del> tag.
+
+    Ex.
+
+    <p> This is <del> not </>del> way!</p>>
+    -->
+
     <br>
 
     <p>Welcome to the <acronym title="World Wide Web">WWW</acronym>.</p>
+
+    <!--
+    This element underlines the text with a dotted line indicating that is an
+    acyronym, but has since been replaced <abbr>.
+
+    Ex.
+        <p> Welcome to the <abbr>WWW</abbr> (World Wide Web).</p>>
+    -->
 </section>
 
 <hr>
@@ -42,12 +128,35 @@
     <h2>The Experimental & Browser-Specific</h2>
 
     <bgsound src="assets/sample.mp3" loop="infinite">
+    <!--
+    This tag is not working as it is not supported by my modern browser.  I opened the web editor in my browser
+    and it is treating it like a generic tag and it does not find the audio file (or at least try to).  Other tags
+    should be used like <a>.
+    -->
         <br>
 
         <blink>Warning: This text might have blinked in 1994.</blink>
+
+        <!--
+        This tag is meant to allow text to flash on and off continuously.
+        This can now be done using CSS or JS using the method String.blink().
+        JS is the preferred method as most modern browsers have issue with the CSS.
+        -->
         <br>
 
         <marquee behavior="scroll" direction="left">Breaking News: The marquee tag refuses to die!</marquee>
+
+        <!--
+        This element is used to insert a scrolling area of text.
+        It is a job for css to do now.
+
+        Ex.
+        <p class .outlined> This text moves.</p>
+
+        .outlined {
+            border: solid;
+        }
+        -->
 </section>
 
 </body>
