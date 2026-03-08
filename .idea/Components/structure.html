@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Match Day: Shooting Guide</title>
+</head>
+<body>
+
+<header>
+    <h1>Sectional Championship: Stage 4</h1>
+    <nav>
+        <ul>
+            <li><a href="#briefing">Course Briefing</a></li>
+            <li><a href="#gear">Required Gear</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <article>
+        <header>
+            <h2>The Gauntlet (Stage 4)</h2>
+        </header>
+
+        <section id="briefing">
+            <h3>Range Procedure</h3>
+            <p>On the start signal, engage targets while remaining within fault lines.</p>
+
+            <aside>
+                <h4>The 180 Rule</h4>
+                <p>Muzzle must never point uprange of the 180-degree plane.</p>
+            </aside>
+
+            <p>This is a 28-round Comstock stage.</p>
+        </section>
+
+        <section>
+            <h3>Equipment Details</h3>
+            <details>
+                <summary>Production Division Restrictions</summary>
+                <p>Magazines are limited to 15 rounds.</p>
+            </details>
+
+            <br>
+
+            <button onclick="document.getElementById('timerDialog').showModal()">Open Timer Logic</button>
+            <dialog id="timerDialog">
+                <p>The timer uses a random start delay.</p>
+                <button onclick="document.getElementById('timerDialog').close()">Close</button>
+            </dialog>
+        </section>
+
+        <footer>
+            <p>Design: Range Master</p>
+        </footer>
+    </article>
+
+    <section id="gear">
+        <h2>Stage Sequence & Equipment</h2>
+
+        <ol start="3" reversed>
+            <li>Final Position: Far Right Port
+                <ul>
+                    <li>Target Sequence
+                        <ol>
+                            <li value="1">Steel Popper</li>
+                            <li>Paper Target T1</li>
+                            <li>Paper Target T2</li>
+                        </ol>
+                    </li>
+                </ul>
+            </li>
+            <li>Initial Position: Low Port</li>
+        </ol>
+
+        <h3>Division Definitions</h3>
+        <dl>
+            <dt>Open Division</dt>
+            <dd>Electronic sights and compensators allowed.</dd>
+            <dt>Carry Optics</dt>
+            <dd>Production firearms with slide-mounted dots.</dd>
+        </dl>
+
+        <menu>
+            <li><button onclick="alert('Make Ready')">Make Ready</button></li>
+            <li><button onclick="alert('Standby')">Standby</button></li>
+        </menu>
+    </section>
+
+    <section>
+        <h2>Inert Data</h2>
+        <template>
+            <div>
+                <slot>Placeholder for shooter name</slot>
+            </div>
+        </template>
+        <p>Template content is hidden from the page.</p>
+    </section>
+
+    <div>
+        <p>End of match documentation.</p>
+    </div>
+</main>
+
+<footer>
+    <p>Copyright 2026 Competitive Shooting Assoc.</p>
+</footer>
+
+</body>
+</html>
