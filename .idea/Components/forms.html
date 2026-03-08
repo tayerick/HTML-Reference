@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Semantic HTML Form</title>
+</head>
+<body>
+
+<header>
+    <h1>Advanced Registration Portal</h1>
+    <p>Fill out the boxes below.</p>
+</header>
+<main>
+    <fieldset>
+        <legend>Identity and Security</legend>
+        <section>
+            <label for="full-name">Full Name:</label>
+            <input type="text" id="full-name" name="full-name" placeholder="Enter Full Name Here" required minlength="2">
+        </section>
+
+        <section>
+            <label for="user-email">Email Address:</label>
+            <input type="email" id="user-email" name="user-email" placeholder="email@example.com">
+        </section>
+
+        <section>
+            <label for="new-password">Create Password</label>
+            <input type="password" id="new-password" name="new-password" placeholder="Create Password" require minlength="6" maxlength="20">
+        </section>
+    </fieldset>
+
+    <fieldset>
+        <legend>Contact Details</legend>
+
+        <section>
+            <label for="user-site">Personal Website (URL):</label>
+            <input type="url" id="user-site" name="user-site" placeholder="https://">
+        </section>
+
+        <section>
+            <label for="user-tel">Phone Number:</label>
+            <input type="tel" id="user-tel" name="user-tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+        </section>
+
+        <section>
+            <label for="fav-topic">Search Interests:</label>
+            <input type="search" id="fav-topic" name="fav-topic" list="topic-options">
+            <datalist id="topic-options">
+                <option value="Reloading Tips"></option>
+                <option value="Competitive Shooting"></option>
+                <option value="Aerodynamics of Bullets"></option>
+            </datalist>
+        </section>
+    </fieldset>
+        <legend>Timeline & Coordination</legend>
+        <section>
+            <label for="date-val">Date:</label>
+            <input type="date" id="date-val" name="date-val">
+        </section>
+        <section>
+            <label for="time-val">Time:</label>
+            <input type="time" id="time-val" name="time-val">
+        </section>
+        <section>
+            <label for="dt-local">Local Meeting:</label>
+            <input type="datetime-local" id="dt-local" name="dt-local">
+        </section>
+        <section>
+            <label for="month-val">Peferred Month:</label>
+            <input type="month" id="month-val" name="month-val">
+        </section>
+        <section>
+            <label for="week-val">Work Week:</label>
+            <input type="week" id="week-val" name="week-val">
+        </section>
+</main>
+</body>
+
+</html>
