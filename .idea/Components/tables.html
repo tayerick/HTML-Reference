@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML5 Tables Practice</title>
+</head>
+<body>
+
+<h1>Tabular Data Demonstration</h1>
+
+<section>
+    <h2>1. Simple Data Table (The Full Element Set)</h2>
+    <table>
+        <caption>Comparison of Popular Programming Languages</caption>
+
+        <colgroup>
+            <col span="1" style="background-color: #eef;">
+            <col span="2"> </colgroup>
+
+        <thead>
+        <tr>
+            <th scope="col">Language</th>
+            <th scope="col">Type</th>
+            <th scope="col">Primary Use</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr>
+            <th scope="row">Python</th>
+            <td>Interpreted</td>
+            <td>Data Science / Web</td>
+        </tr>
+        <tr>
+            <th scope="row">JavaScript</th>
+            <td>Just-in-Time</td>
+            <td>Web Development</td>
+        </tr>
+        <tr>
+            <th scope="row">C++</th>
+            <td>Compiled</td>
+            <td>Systems / Gaming</td>
+        </tr>
+        </tbody>
+
+        <tfoot>
+        <tr>
+            <td colspan="3">Data based on 2024 developer surveys.</td>
+        </tr>
+        </tfoot>
+    </table>
+</section>
+
+<hr>
+
+<section>
+    <h2>2. Complex Spanning & Accessibility Attributes</h2>
+    <table>
+        <caption>Weekly Team Availability</caption>
+        <thead>
+        <tr>
+            <th id="h-time">Time Slot</th>
+            <th id="h-mon">Monday</th>
+            <th id="h-tue">Tuesday</th>
+            <th id="h-wed">Wednesday</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th id="r-morning" scope="row">Morning</th>
+            <td rowspan="2" headers="h-mon r-morning">Team Standup (All Hands)</td>
+            <td headers="h-tue r-morning">Client Call</td>
+            <td headers="h-wed r-morning">Focus Time</td>
+        </tr>
+        <tr>
+            <th id="r-mid" scope="row">Mid-Day</th>
+            <td colspan="2" headers="h-tue h-wed r-mid">Conference Workshop</td>
+        </tr>
+        </tbody>
+    </table>
+</section>
+
+</body>
+</html>
