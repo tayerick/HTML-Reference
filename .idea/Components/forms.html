@@ -54,6 +54,8 @@
             </datalist>
         </section>
     </fieldset>
+
+    <fieldset>
         <legend>Timeline & Coordination</legend>
         <section>
             <label for="date-val">Date:</label>
@@ -75,6 +77,64 @@
             <label for="week-val">Work Week:</label>
             <input type="week" id="week-val" name="week-val">
         </section>
+    </fieldset>
+
+    <fieldset>
+        <legend>Preferences and Files</legend>
+
+        <section>
+            <label for="color-pick">Color:</label>
+            <input type="color" id="color-pick" name="color-pick" value="#3498db">
+        </section>
+
+        <section>
+            <label for="qty">Quantity (1-50, increments of 5):</label>
+            <input type="number" id="qty" name="qty" min="0" max="50" step="5">
+        </section>
+
+        <section>
+            <label for="volume">Volume Level:</label>
+            <input type="range" id="volume" name="volume" min="0" max="100">
+            <output>50</output>
+        </section>
+
+        <section>
+            <label for="files-upload">Attachments:</label>
+            <input type="file" id="files-upload" name="files-upload" accept=".pdf, image/*" multiple>
+        </section>
+    </fieldset>
+    <fieldset>
+        <legned>Selections and Feedback</legned>
+
+        <section>
+            <label for="category">Shooting Category:</label>
+            <select id="category" name="category">
+                <optgroup label="Type Shooting">
+                    <option value="Extreme Long Range" selected>Extreme Long Range</option>
+                    <option value="Three Gun">Three Gun</option>
+                    <option value="USPSA">USPSA</option>
+                </optgroup>
+            </select>
+        </section>
+
+        <section>
+            <p>Notifications:</p>
+            <label>
+                <input type="checkbox" name="alert" value="email" checked> Email
+            </label>
+            <label>
+                <input type="checkbox" name="alert" value="sms"> SMS
+            </label>
+
+            <p>Membership Tier:</p>
+            <label>
+                <input type="radio" name="tier" value="free"> Free
+            </label>
+            <label>
+                <input type="radio" name="tier" value="pro"> Pro
+            </label>
+        </section>
+    </fieldset>
 </main>
 </body>
 
