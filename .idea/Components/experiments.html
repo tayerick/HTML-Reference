@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Experiment 1: The Ammo Watcher</title>
+</head>
+<body>
+
+<header>
+    <h1>HTML Experiment: Mechanical Gauge Logic</h1>
+    <p>This experiment uses the <code>&lt;meter&gt;</code> tag to simulate a firearm magazine's capacity without CSS styling.</p>
+</header>
+
+<main>
+    <section>
+        <h2>Magazine Capacity Status</h2>
+
+        <section>
+            <label>Full Magazine (28/30):</label><br>
+            <meter min="0" max="30" low="5" high="15" optimum="30" value="28"></meter>
+            <span>Safe to Engage</span>
+        </section>
+
+        <br>
+
+        <section>
+            <label>Half Empty (12/30):</label><br>
+            <meter min="0" max="30" low="5" high="15" optimum="30" value="12"></meter>
+            <span>Consider Reloading</span>
+        </section>
+
+        <br>
+
+        <section>
+            <label>Critical Condition (3/30):</label><br>
+            <meter min="0" max="30" low="5" high="15" optimum="30" value="3"></meter>
+            <strong>RELOAD NOW!</strong>
+        </section>
+    </section>
+
+    <!--
+
+      Attribute Logic: By setting <code>optimum</code> higher than <code>high</code>, we tell the browser that higher values are "better," which triggers the green color.
+      Semantic Replacement: Using <code>&lt;section&gt;</code> instead of <code>&lt;div&gt;</code> ensures every container has a specific thematic purpose in the document structure.
+
+    -->
+
+    <section>
+        <h2>How Deep Can We Go?</h2>
+
+        <script>
+            const container = document.getElementById('sinkhole');
+            let currentParent = container;
+            const depth = 10000;
+
+            for (let i = 1; i <= depth; i++) {
+                const newSection = document.createElement('section');
+                newSection.setAttribute('title', 'Level ' + i);
+
+                // Adding a tiny bit of text to every 1000th level so we can see progress
+                if (i % 1000 === 0) {
+                    newSection.textContent = "--- Level " + i + " reached ---";
+                }
+
+                currentParent.appendChild(newSection);
+                currentParent = newSection;
+            }
+        </script>
+    </section>
+
+    <!--
+    This experiment is meant to make the browser crash, but something I learned is that most modern
+    browsers have protocols in place to keep this from happening.  What happens is the javascript code that
+    is embedded in html produces multiple levels that are nested in with each other.
+    -->
+
+    <section>
+        <h2>Firearm Condition Selector</h2>
+        <p>Use your mouse to toggle states, or use <strong>Alt+S</strong> for Safe and <strong>Alt+F</strong> for Fire.</p>
+
+        <form>
+            <fieldset>
+                <legend>Manual Safety Selector</legend>
+
+                <section>
+                    <input type="radio" id="safe" name="selector" checked accesskey="s">
+                    <label for="safe"><strong>SAFE</strong> (Trigger is locked)</label>
+                </section>
+
+                <br>
+
+                <section>
+                    <input type="radio" id="fire" name="selector" accesskey="f">
+                    <label for="fire"><strong>FIRE</strong> (System Live - Hammer Cocked)</label>
+                </section>
+            </fieldset>
+        </form>
+    </section>
+
+    <!--
+    This experiment proves that HTML accesskeys are often overridden by the Browser's
+    UI (UI-Precedence), making them unreliable for critical systems like a 'Fire' command!
+    -->
+</main>
+
+<footer>
+    <p><a href="experiments.html">Back to Experiments List</a></p>
+</footer>
+
+</body>
+</html>
